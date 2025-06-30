@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with PDF</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Chat with PDF</h1>
+    </header>
+
+    <main>
+        <!-- PDF Upload Section -->
+        <section id="upload-section">
+            <h2>Upload PDF Files</h2>
+            <div id="drop-zone">
+                <p>Drag & drop PDF files here or</p>
+                <input type="file" id="pdf-upload" accept=".pdf" multiple>
+                <label for="pdf-upload">Select Files</label>
+            </div>
+            <button id="process-btn">Process Documents</button>
+        </section>
+
+        <!-- Chat Interface -->
+        <section id="chat-section" style="display:none;">
+            <div id="chat-container">
+                <div id="chat-messages"></div>
+                <div id="input-area">
+                    <input type="text" id="user-input" placeholder="Ask a question...">
+                    <button id="send-btn">Send</button>
+                </div>
+            </div>
+            <div id="mode-selector">
+                <label>
+                    <input type="radio" name="mode" value="multi-turn" checked>
+                    Multi-turn Conversation
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="deep-research">
+                    Deep Research Mode
+                </label>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
